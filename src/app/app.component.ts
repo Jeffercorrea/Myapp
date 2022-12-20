@@ -13,41 +13,37 @@ export class AppComponent {
   public userName = JSON.parse(localStorage.getItem('usuario'));
   b: boolean = false;
   public usuarios: Usuario[] = [];
-  
-  
-  public appPages = [
+
+
+  public appPages1= [
     { title: 'Inicio ', url: '/inicio', icon: 'home' },
-    { title: 'Mis calificaciones', url: '/calificaciones', icon: 'star-half' },
+    { title: 'Mis contenidos', url: '/calificaciones', icon: 'star-half' },
     { title: 'Peliculas', url: '/peliculas', icon: 'film' },
     { title: 'Videojuegos ', url: '/videojuegos', icon: 'game-controller' },
-    { title: 'Trash', url: '/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/Spam', icon: 'warning' },
     { title: 'cerrar sesion ', url: '/login', icon: 'log-out' },
   ];
-  public appPagesAdmin = [
+  public appPages = [
     { title: 'Inicio ', url: '/inicio', icon: 'home' },
-    { title: 'Mis calificaciones', url: '/calificaciones', icon: 'star-half' },
+    { title: 'Mis contenidos', url: '/calificaciones', icon: 'star-half' },
     { title: 'Peliculas', url: '/peliculas', icon: 'film' },
     { title: 'Videojuegos ', url: '/videojuegos', icon: 'game-controller' },
-    { title: 'Trash', url: '/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/Spam', icon: 'warning' },
     { title: 'Subir', url: '/cargar', icon: 'arrow-up-circle' },
     { title: 'cerrar sesion ', url: '/login', icon: 'log-out' },
   ];
- 
-  
- 
+
+
+
   constructor(public navControl: NavController) {
     let usuario = new Usuario();
     let data = {id: 1, username: 'user', email:'@user' }
     usuario.setValues(data);
   }
 
-  
-  
+
+
 
   logout(){
-    this.navControl.navigateRoot('/login'); 
+    this.navControl.navigateRoot('/login');
   }
 }
 

@@ -2,7 +2,7 @@ import { Comentarios } from "./comentarios";
 import { Usuario } from "./usuario";
 
 export class Peliculavideojuegos {
-    public id;
+    public id?;
     public titulo;
     public descripcion;
     public imagen;
@@ -16,7 +16,6 @@ export class Peliculavideojuegos {
         this.descripcion =data.descripcion;
         this.imagen =data.imagen;
         this.tipo =data.tipo;
-        this.usuario = new Usuario;
-        this.usuario.setValues(data.usuario)
+
     }
 }

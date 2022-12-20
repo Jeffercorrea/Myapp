@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
- 
+
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
@@ -31,13 +31,18 @@ const routes: Routes = [
   {
     path: 'videojuegos',
     loadChildren: () => import('./videojuegos/videojuegos.module').then( m => m.VideojuegosPageModule)
-  },  {
+  },
+  {
     path: 'comentario',
     loadChildren: () => import('./comentario/comentario.module').then( m => m.ComentarioPageModule)
   },
   {
     path: 'cargar',
     loadChildren: () => import('./cargar/cargar.module').then( m => m.CargarPageModule)
+  },
+  {
+    path: 'editar/:id',
+    loadChildren: () => import('./editar/editar.module').then( m => m.EditarPageModule)
   }
 
 

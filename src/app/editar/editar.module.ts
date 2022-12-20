@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CargarPageRoutingModule } from './cargar-routing.module';
+import { EditarPageRoutingModule } from './editar-routing.module';
 
-import { CargarPage } from './cargar.page';
+import { EditarPage } from './editar.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { CargarPage } from './cargar.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    CargarPageRoutingModule
+    EditarPageRoutingModule
   ],
-  declarations: [CargarPage]
+  declarations: [EditarPage]
 })
-export class CargarPageModule {}
+export class EditarPageModule {}

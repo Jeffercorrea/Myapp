@@ -1,11 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cargar</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="formularioSubir" (keyup.enter)="subir()">
+  <form [formGroup]="formularioEditar" (keyup.enter)="onUpdate()">
     <ion-card>
       <img
         alt="img"
@@ -50,7 +53,7 @@
         </ion-item>
       </ion-list>
 
-      <ion-button (click)="subir()">Subir</ion-button>
+      <ion-button (click)="onUpdate()">Subir</ion-button>
     </ion-card>
   </form>
 </ion-content>
