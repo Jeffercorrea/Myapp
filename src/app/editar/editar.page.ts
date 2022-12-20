@@ -17,6 +17,7 @@ export class EditarPage implements OnInit {
   private id: string;
   constructor(public fb: FormBuilder, private rutaActiva: ActivatedRoute,private contenidoService: PeliculayvideojuegosService) {
     this.formularioEditar = this.fb.group({
+      'imagen': new FormControl(null,Validators.required),
       'titulo': new FormControl(null,Validators.required),
       'descripcion': new FormControl(null,Validators.required),
       'tipo': new FormControl(null,Validators.required),
@@ -27,7 +28,7 @@ export class EditarPage implements OnInit {
     this.id = this.rutaActiva.snapshot.paramMap.get('id');
     this.contenidoService.get( this.id).subscribe(res => {
       console.log(res);
-      this.formularioEditar.setValue({titulo: res.titulo, descripcion: res.descripcion, tipo: res.tipo})
+      this.formularioEditar.setValue({imagen: res.imagen,titulo: res.titulo, descripcion: res.descripcion, tipo: res.tipo})
     });
 
 
@@ -35,7 +36,7 @@ export class EditarPage implements OnInit {
   onUpdate(){
 
     var f = this.formularioEditar.value;
-    let data = {id: this.id, titulo: f.titulo, descripcion: f.descripcion, tipo: f.tipo};
+    let data = {id: this.id,imagen: f.imagen, titulo: f.titulo, descripcion: f.descripcion, tipo: f.tipo};
 
 
     console.log('update');

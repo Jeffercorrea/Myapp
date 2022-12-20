@@ -18,6 +18,7 @@ export class CargarPage implements OnInit {
 
   constructor(public fb: FormBuilder, public navControl:NavController , public peliculayvideojuegosService:PeliculayvideojuegosService) {
     this.formularioSubir = this.fb.group({
+      'imagen': new FormControl(null,Validators.required),
       'titulo': new FormControl(null,Validators.required),
       'descripcion': new FormControl(null,Validators.required),
       'tipo': new FormControl(null,Validators.required),
@@ -30,7 +31,7 @@ export class CargarPage implements OnInit {
   subir(){
 
     var f = this.formularioSubir.value;
-    let data = {titulo: f.titulo, descripcion: f.descripcion, tipo: f.tipo};
+    let data = {titulo: f.titulo, descripcion: f.descripcion, tipo: f.tipo, imagen: f.titulo};
 
     console.log('OK');
     this.contenido = new Peliculavideojuegos();

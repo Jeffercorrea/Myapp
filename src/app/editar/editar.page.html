@@ -10,10 +10,13 @@
 <ion-content>
   <form [formGroup]="formularioEditar" (keyup.enter)="onUpdate()">
     <ion-card>
-      <img
-        alt="img"
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
-      />
+      <ion-item>
+        <ion-label position="floating">URL imagen</ion-label>
+        <ion-input
+          formControlName="imagen"
+          placeholder="imagen"
+        ></ion-input>
+      </ion-item>
       <ion-card-header>
         <ion-card-title>
           <ion-item>

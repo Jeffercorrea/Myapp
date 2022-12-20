@@ -41,9 +41,9 @@ export class LoginPage implements OnInit {
   async Ingresar() {
 
     var f = this.formulariologin.value;
+  
 
     this.usuarioServicios.autenticar(f.nombre).subscribe(res => {
-      console.log(res[0]);
        if (res[0].nombre === f.nombre && res[0].password ===f.password){
          this.router.navigate(['/inicio']);
        }
